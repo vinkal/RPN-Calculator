@@ -14,8 +14,9 @@ public class Main {
         Calculator calculator = new Calculator();
         System.out.println("Enter your expression, or 'q' to quit");
          while (true) {
-            if (console.hasNextLine() ) {
-                break;
+            if (!console.hasNextLine() ) {
+                System.out.println("Exiting program");
+                System.exit(0);
             }
             String inputString = console.nextLine();
             if ("q".equals(inputString) ) {
